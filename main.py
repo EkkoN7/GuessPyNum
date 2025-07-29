@@ -27,14 +27,13 @@ print(ascii_art)
 
 
 user_select = input("Welcome to GuessPyName! In which range should the numbers be (e.g., 1 to max. 9000)?\nUser: 1 to ").strip()
-users_life = input("\nUser: ").strip()
+users_life = input("How many guesses do you get (max: 100)?\nUser: ").strip()
 users_life_isdigit = users_life.isdigit()
 user_select_isdigit = user_select.isdigit()
 if user_select_isdigit == True and users_life_isdigit == True:
     if int(users_life) <= 100 and int(user_select) <= 9000:
         users_life_int = int(users_life)
         random_num = random.randint(1, int(user_select))
-        print (random_num)
         is_running = True
         while users_life_int > 0 and is_running == True:
             print(f"Users Life = {users_life_int}")
