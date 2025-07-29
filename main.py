@@ -31,7 +31,7 @@ users_life = input("How many guesses do you get (max: 100)?\nUser: ").strip()
 users_life_isdigit = users_life.isdigit()
 user_select_isdigit = user_select.isdigit()
 if user_select_isdigit == True and users_life_isdigit == True:
-    if int(users_life) <= 100 and int(user_select) <= 9000:
+    if int(users_life) <= 100 and int(users_life) > 0 and int(user_select) <= 9000 and int(user_select) > 0:
         users_life_int = int(users_life)
         random_num = random.randint(1, int(user_select))
         is_running = True
